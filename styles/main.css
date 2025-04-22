@@ -1,14 +1,30 @@
+:root {
+  --link-color: #0e47cc;
+  --link-color-hover: #082f7f;
+  --default-color: #222;
+  --default-color-bg: #fafafa;
+}
+
 body {
-  /* font-family: Open Sans,Arial; */
   font-family: "Gelasio", serif;
-  /* font-family: "Montserrat", sans-serif; */
   font-optical-sizing: auto;
-  color: #454545;
+  color: var(--default-color);
   font-size: 16px;
   margin: 2em auto;
   max-width: 800px;
   padding: 2rem;
   line-height: 1.4;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
 }
 
 .cv-header {
@@ -135,7 +151,6 @@ h2 > hr {
   }
 }
 
-
 .company-info {
   display: flex;
   flex-direction: column;
@@ -148,7 +163,6 @@ h2 > hr {
   margin-left: auto;
   margin-right: auto;
   background-color: #a7a7a7;
-  /* background-color: #b3b3b3; */
   width: 2px;
   height: auto;
 }
@@ -190,7 +204,7 @@ h2 > hr {
 }
 
 .tech {
-  background-color: #fff;
+  background-color: var(--default-color-bg);
   width: 60px;
   height: 60px;
   padding: 8px;
